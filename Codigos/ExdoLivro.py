@@ -5,8 +5,10 @@ from pandas import concat
 from pandas.plotting import lag_plot
 from matplotlib import pyplot
 from pandas.plotting import autocorrelation_plot
+from statsmodels.tsa.seasonal import seasonal_decompose
 
-series = read_csv('teste.csv', sep=';', header=0, index_col=0, parse_dates=True, squeeze=True)
+path = 'https://github.com/MarceloAvanzii/TCC/blob/main/teste.csv'
+series = read_csv(path, sep=';', header=0, index_col=0, parse_dates=True, squeeze=True)
 #print(series['2018-01'])
 
 
@@ -172,8 +174,10 @@ pyplot.show()
 '''
 
 
-#cap 7
-
+#decomposição em sazonalidade tendencia e residuo etc
+result = seasonal_decompose(series, model='additive',freq=30)
+result.plot()
+pyplot.show()
 
 
 
