@@ -78,7 +78,10 @@ print(dataframe.head(5))
 
 #Line Plot or dot plot
 '''
-series.plot(style='k.')
+series.plot(figsize=(15,6))
+pyplot.legend(['Vazão de Entrada (FT01)'], loc='upper left')
+pyplot.xlabel("Time")
+pyplot.ylabel("m³/h")
 pyplot.show()
 '''
 
