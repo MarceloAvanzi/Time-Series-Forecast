@@ -19,8 +19,8 @@ df = df.set_index('Time')
 df = df.resample("D").last()
 
 '''
-# Diferenciação de um grau para torná-la estacionária
-series_diff = df.diff()
+# Diferenciação de grau um para torná-la estacionária
+series_diff = df.diff() 
 series_diff.plot()
 
 # Aplicação do Arima
