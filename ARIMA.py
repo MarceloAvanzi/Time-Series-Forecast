@@ -92,7 +92,7 @@ for t in range (len(test)):
     diff = difference(history, meses_no_ano)
 
     # Cria um modelo ARIMA com os dados do history
-    model = ARIMA(diff, order=(7,0,1))
+    model = ARIMA(diff, order=(3,0,1))
 
     # Treina o modelo ARIMA
     model_fit = model.fit(trend='nc', disp=0)
@@ -113,7 +113,7 @@ for t in range (len(test)):
     history.append(valor_real)
 
     # imprime valor predito e valor real
-    print('Valor predito=%.3f, Valor esperado=%.3f'%(valor_predito, valor_real))
+    #print('Valor predito=%.3f, Valor esperado=%.3f'%(valor_predito, valor_real))
 
 # Avalia os resultados
 RMSE = sqrt(mean_squared_error(test, predictions))
@@ -142,14 +142,7 @@ residuals = pd.DataFrame(residuals)
 residuals.head()
 residuals.describe()
 residuals.plot()
-
-
-
-test.plot_predict(700,df['Vazao01'].count()+10,dynamic=False)
 plt.show()
-fc, se, conf = test.forecast(steps=7, alpha=0.05)
-fc_vendas_dia = pd.Series(fc, name='vendas_dia')
-
 
 
 
