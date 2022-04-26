@@ -1,4 +1,5 @@
-Projeto de TCC sobre Previsão de Series Temporais utilizando Inteligência Artificial \
+Projeto de TCC sobre Previsão de Series Temporais utilizando modelos ARIMA, SARIMAX E RANDOM FOREST \
 em Python. \
-Engenharia de Controle e Automação PUC-PR \
+Dados disponibilizados pela Sanepar
+Engenharia de Controle e Automação - 2016 Noturno - PUC-PR \
 Marcelo Daniel Avanzi
